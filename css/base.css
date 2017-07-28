@@ -1,0 +1,370 @@
+/*-------------------------------------------------------
+                                  IMPORTs
+---------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Marvel|Shadows+Into+Light");
+/*-------------------------------------------------------
+                                  VARs
+---------------------------------------------------------*/
+/*-------------------------------------------------------
+                                  MIXINs
+---------------------------------------------------------*/
+/*-------------------------------------------------------
+                              UNIVERSAL
+---------------------------------------------------------*/
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*-------------------------------------------------------
+                                HEADER
+---------------------------------------------------------*/
+header {
+  height: 450px;
+  background: url("../img/valley.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+  header .logo {
+    float: left;
+    margin: 10px 0 0 30px;
+    width: 50px;
+    height: 50px; }
+    header .logo .svg {
+      fill: rgba(0, 0, 0, 0.4); }
+  header nav {
+    float: right;
+    margin: 30px 30px 0 0; }
+    header nav a {
+      display: inline-block;
+      margin-left: 20px;
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.45);
+      font-family: Marvel, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase; }
+      header nav a:hover {
+        color: black; }
+  header h1 {
+    text-align: center;
+    font-family: "times new roman";
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    padding-top: 100px;
+    clear: both; }
+    header h1 span {
+      display: inline-block;
+      padding: 0.2em 0.5em;
+      border: #fff solid 10px; }
+  header .kicker {
+    text-align: center;
+    font-family: Marvel, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    color: #fff; }
+
+/*-------------------------------------------------------
+                                CONTENT
+---------------------------------------------------------*/
+#about-section h3 {
+  font-family: Marvel, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #e1c184;
+  text-align: center;
+  padding: 100px 0 30px; }
+
+#about-section .face-block {
+  max-width: 780px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin: 0 auto; }
+  #about-section .face-block .face-img {
+    background: url(../img/norm8020.png);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3; }
+  #about-section .face-block [class^="icon-"] {
+    fill: #c99065; }
+    #about-section .face-block [class^="icon-"].icon-pencil {
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+      -ms-flex-order: 1;
+      order: 1; }
+    #about-section .face-block [class^="icon-"].icon-mouse {
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+      -ms-flex-order: 2;
+      order: 2; }
+    #about-section .face-block [class^="icon-"].icon-browser {
+      -webkit-box-ordinal-group: 5;
+      -webkit-order: 4;
+      -ms-flex-order: 4;
+      order: 4; }
+    #about-section .face-block [class^="icon-"].icon-video {
+      -webkit-box-ordinal-group: 6;
+      -webkit-order: 5;
+      -ms-flex-order: 5;
+      order: 5; }
+    #about-section .face-block [class^="icon-"] svg {
+      width: 50px;
+      height: 50px; }
+
+@media screen and (max-width: 650px) {
+  #about-section .face-block {
+    display: block;
+    text-align: center; }
+    #about-section .face-block div {
+      display: inline-block;
+      margin: 0 24px; }
+    #about-section .face-block .face-img {
+      display: block;
+      margin: 0 auto; } }
+
+@media screen and (max-width: 420px) {
+  #about-section .face-block div {
+    margin: 0 10px; } }
+
+#about-section .blurb {
+  max-width: 620px;
+  padding: 0 15px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: Marvel, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase; }
+
+#about-section .skill-block {
+  max-width: 540px;
+  margin: 100px auto;
+  color: #999;
+  overflow: hidden;
+  text-align: center; }
+  #about-section .skill-block .skill-unit {
+    width: 270px;
+    float: left; }
+  #about-section .skill-block .skill-icons {
+    font-size: 0;
+    margin: 0 0 30px; }
+    #about-section .skill-block .skill-icons span {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background-color: #c99065;
+      margin-right: 10px;
+      border-radius: 50%; }
+      #about-section .skill-block .skill-icons span:after {
+        content: ' ';
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-radius: 50%;
+        margin: 2px; }
+    #about-section .skill-block .skill-icons.level-1 span:nth-child(n+2) {
+      background: #aaa; }
+    #about-section .skill-block .skill-icons.level-2 span:nth-child(n+3) {
+      background: #aaa; }
+    #about-section .skill-block .skill-icons.level-3 span:nth-child(n+4) {
+      background: #aaa; }
+    #about-section .skill-block .skill-icons.level-4 span:nth-child(n+5) {
+      background: #aaa; }
+    #about-section .skill-block .skill-icons.level-5 span:nth-child(n+6) {
+      background: #aaa; }
+    #about-section .skill-block .skill-icons.level-6 span:nth-child(n+7) {
+      background: #aaa; }
+    #about-section .skill-block .skill-icons.level-7 span:nth-child(n+8) {
+      background: #aaa; }
+    #about-section .skill-block .skill-icons.level-8 span:nth-child(n+9) {
+      background: #aaa; }
+    #about-section .skill-block .skill-icons.level-9 span:nth-child(n+10) {
+      background: #aaa; }
+    #about-section .skill-block .skill-icons.level-10 span:nth-child(n+11) {
+      background: #aaa; }
+
+@media screen and (max-width: 560px) {
+  #about-section .skill-block {
+    width: 270px; } }
+
+#work-section {
+  background: #fff;
+  text-align: center;
+  overflow: hidden; }
+  #work-section h3 {
+    font-family: "Shadows Into Light", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #c99065;
+    padding: 18px; }
+  #work-section .work-belt {
+    width: 200%;
+    position: relative;
+    left: -100%; }
+  #work-section .thumb-wrap, #work-section .work-wrap {
+    width: 50%;
+    float: left; }
+  #work-section .thumb-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    overflow: hidden; }
+    #work-section .thumb-container .thumb-unit {
+      display: block;
+      width: 25%;
+      padding-top: 16%;
+      float: left;
+      position: relative;
+      overflow: hidden; }
+      @media screen and (max-width: 540px) {
+        #work-section .thumb-container .thumb-unit {
+          width: 50%;
+          padding-top: 26%; } }
+      #work-section .thumb-container .thumb-unit .thumb-overlay {
+        position: absolute;
+        top: 100%;
+        right: 0px;
+        left: 0px;
+        height: 100%;
+        background: rgba(201, 144, 101, 0.9);
+        -webkit-transition: top 0.3s;
+        -o-transition: top 0.3s;
+        transition: top 0.3s;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around; }
+        #work-section .thumb-container .thumb-unit .thumb-overlay strong {
+          display: block;
+          padding: 0 20px;
+          font-family: "Shadows Into Light", sans-serif;
+          font-size: 20px;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: #fff; }
+      #work-section .thumb-container .thumb-unit:hover .thumb-overlay {
+        position: absolute;
+        top: 0%;
+        right: 0px;
+        left: 0px; }
+    #work-section .thumb-container .a {
+      background: url("../img/ticket1-2yh37p4wt2m8h9a260x88w.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; }
+    #work-section .thumb-container .b {
+      background: url("../img/404-2yh34mov5w3pmm5qllevi8.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; }
+    #work-section .thumb-container .c {
+      background: url("../img/HC-2yh3678dtjyg8g21xelxq8.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; }
+    #work-section .thumb-container .d {
+      background: url("../img/pp1-2yh37ab5ijq0jj76pt3uv4.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; }
+    #work-section .thumb-container .e {
+      background: url("../img/wilderness-2yh37v617479vl3wnlspa8.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; }
+    #work-section .thumb-container .f {
+      background: url("../img/eames-2yh35o4tx2xtt2ljdqi9s0.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; }
+    #work-section .thumb-container .g {
+      background: url("../img/riverrat-2yh37bkdxh1wc0nwkgyeww.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; }
+    #work-section .thumb-container .h {
+      background: url("../img/bivouac2-2yh34qu4xjoxc7sib6iigw.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; }
+  #work-section .work-container {
+    max-width: 600px;
+    margin: 0 auto; }
+    #work-section .work-container h4 {
+      font-family: Marvel, sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #c99065;
+      line-height: 1.2;
+      margin: 0 0 20px; }
+    #work-section .work-container div {
+      max-width: 100%;
+      margin-bottom: 24px; }
+
+/*-------------------------------------------------------
+                                  FOOTER
+---------------------------------------------------------*/
+footer {
+  background: #618498; }
+  footer .box {
+    padding: 12px 30px;
+    overflow: hidden; }
+    footer .box .logo {
+      float: left;
+      width: 50px;
+      height: 50px;
+      margin-right: 30px; }
+      footer .box .logo .svg {
+        fill: rgba(0, 0, 0, 0.4); }
+    footer .box .content-wrap {
+      float: left; }
+      footer .box .content-wrap a {
+        display: inline-block;
+        margin-left: 20px;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.45);
+        font-family: Marvel, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase; }
+        footer .box .content-wrap a:hover {
+          color: black; }
+      footer .box .content-wrap .copyright {
+        margin: 12px 0 0 20px;
+        font-family: Marvel, sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.6); }
