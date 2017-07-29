@@ -80,7 +80,7 @@ header {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #e1c184;
+  color: #c99065;
   text-align: center;
   padding: 100px 0 30px; }
 
@@ -212,19 +212,22 @@ header {
 
 #work-section {
   background: #fff;
-  text-align: center;
-  overflow: hidden; }
+  overflow-x: hidden; }
   #work-section h3 {
-    font-family: "Shadows Into Light", sans-serif;
+    font-family: Marvel, sans-serif;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
     color: #c99065;
-    padding: 18px; }
+    padding: 18px;
+    text-align: center; }
   #work-section .work-belt {
     width: 200%;
     position: relative;
-    left: -100%; }
+    left: 0%;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
   #work-section .thumb-wrap, #work-section .work-wrap {
     width: 50%;
     float: left; }
@@ -320,18 +323,36 @@ header {
       background-position: center center; }
   #work-section .work-container {
     max-width: 600px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: relative; }
+    #work-section .work-container .work-return {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      opacity: 0.6;
+      position: absolute;
+      top: 6px;
+      left: -60px; }
+      #work-section .work-container .work-return svg {
+        fill: rgba(0, 0, 0, 0.4); }
+      #work-section .work-container .work-return:hover {
+        opacity: 1; }
     #work-section .work-container h4 {
       font-family: Marvel, sans-serif;
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 300;
       text-transform: uppercase;
       color: #c99065;
       line-height: 1.2;
       margin: 0 0 20px; }
-    #work-section .work-container div {
+    #work-section .work-container .spacer {
       max-width: 100%;
       margin-bottom: 24px; }
+  @media screen and (max-width: 750px) {
+    #work-section .work-container .work-return {
+      left: 3px; }
+    #work-section .work-container h4 {
+      margin-left: 60px; } }
 
 /*-------------------------------------------------------
   FOOTER

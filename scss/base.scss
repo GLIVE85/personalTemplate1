@@ -140,7 +140,7 @@ header {
 #about-section {
   h3 {
     @include textStyle ($fontMain, 16px, 700);
-    color: $accent-light;
+    color: $accent;
     text-align: center;
     padding: 100px 0 30px;
   }
@@ -267,19 +267,20 @@ header {
 
 #work-section {
   background: $bgColor;
-  text-align: center;
-  overflow: hidden;
+  overflow-x: hidden;
 
   h3 {
-    @include textStyle($fontAlt, 16px, 700);
+    @include textStyle($fontMain, 16px, 700);
     color: $accent;
     padding: 18px;
+    text-align: center;
   }
 
   .work-belt {
     width: 200%;
     position: relative;
-    left: -100%;
+    left: 0%;
+    transition: all 0.5s;
   }
 
   .thumb-wrap, .work-wrap {
@@ -364,17 +365,45 @@ header {
   .work-container {
     max-width: 600px;
     margin: 0 auto;
+    position: relative;
+
+    .work-return {
+      @include size(20px, 20px);
+      cursor: pointer;
+      opacity: 0.6;
+      @include position(absolute, 6px, null, null, -60px);
+
+      svg {
+        fill: rgba(0,0,0,0.4);
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
 
     h4 {
-      @include textStyle($fontMain, 24px, 300);
+      @include textStyle($fontMain, 28px, 300);
       color: $accent;
       line-height: 1.2;
       margin: 0 0 20px;
     }
 
-    div {
+    .spacer {
       max-width: 100%;
       margin-bottom: 24px;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .work-container {
+      .work-return {
+        left: 3px;
+      }
+
+      h4 {
+        margin-left: 60px;
+      }
     }
   }
 }
