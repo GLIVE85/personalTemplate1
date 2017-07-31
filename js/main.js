@@ -28,6 +28,8 @@ function workBelt() {
     });
 }
 
+
+
 $(function() {
       smoothScroll(300);
       workBelt();
