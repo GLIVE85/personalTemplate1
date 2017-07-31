@@ -1,0 +1,40 @@
+footer {
+  background: #618498;
+
+  .box {
+    padding: 12px 30px;
+    overflow: hidden;
+
+    .logo {
+      float: left;
+      @include size(50px, 50px);
+      margin-right: 30px;
+      .svg {
+        fill: rgba(0,0,0,0.4);
+      }
+    }
+
+    .content-wrap {
+      float: left;
+
+      a {
+        display: inline-block;
+        margin-left: 20px;
+
+        text-decoration: none;
+        color: rgba(0,0,0,0.45);
+        @include textStyle ($fontMain, 14px, 700);
+
+        &:hover {
+          color: rgba(0,0,0,1.0);
+        }
+      }
+
+      .copyright {
+        margin: 12px 0 0 20px;
+        @include textStyle ($fontMain, 13px, 300);
+        color: rgba(0,0,0,0.6);
+      }
+    }
+  }
+}

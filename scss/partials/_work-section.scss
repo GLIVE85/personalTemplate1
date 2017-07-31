@@ -1,0 +1,142 @@
+#work-section {
+  background: $bgColor;
+  overflow-x: hidden;
+
+  h3 {
+    @include textStyle($fontMain, 16px, 700);
+    color: $accent;
+    padding: 18px;
+    text-align: center;
+  }
+
+  .work-belt {
+    width: 200%;
+    position: relative;
+    left: 0%;
+    transition: all 0.5s;
+  }
+
+  .thumb-wrap, .work-wrap {
+    width: 50%;
+    float: left;
+  }
+
+  .thumb-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    overflow: hidden;
+
+    .thumb-unit {
+      display: block;
+      width: 25%;
+      padding-top: 16%;
+      float: left;
+      position: relative;
+      overflow: hidden;
+
+      @media screen and (max-width: 540px) {
+        width: 50%;
+        padding-top: 26%;
+      }
+
+      .thumb-overlay {
+        @include position(absolute, 100%, 0px, null, 0px);
+        height: 100%;
+        background: fade-out($accent, 0.1);
+        transition: top 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        strong {
+          display: block;
+          padding: 0 20px;
+          @include textStyle($fontAlt, 20px, 700);
+          color: $bgColor;
+        }
+      }
+
+      &:hover .thumb-overlay {
+        @include position(absolute, 0%, 0px, null, 0px);
+      }
+    }
+
+    .a {
+      @include bgDefault('../img/proj1/thumb.jpg');
+    }
+
+    .b {
+      @include bgDefault('../img/proj2/thumb.jpg');
+    }
+
+    .c {
+      @include bgDefault('../img/proj3/thumb.jpg');
+    }
+
+    .d {
+      @include bgDefault('../img/proj4/thumb.jpg');
+    }
+
+    .e {
+      @include bgDefault('../img/proj5/thumb.jpg');
+    }
+
+    .f {
+      @include bgDefault('../img/proj6/thumb.jpg');
+    }
+
+    .g {
+      @include bgDefault('../img/proj7/thumb.jpg');
+    }
+
+    .h {
+      @include bgDefault('../img/proj8/thumb.jpg');
+    }
+  }
+
+  .work-container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    display: none;
+
+
+    .work-return {
+      @include size(20px, 20px);
+      cursor: pointer;
+      opacity: 0.6;
+      @include position(absolute, 6px, null, null, -60px);
+
+      svg {
+        fill: rgba(0,0,0,0.4);
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    h4 {
+      @include textStyle($fontMain, 28px, 300);
+      color: $accent;
+      line-height: 1.2;
+      margin: 0 0 20px;
+    }
+
+    .spacer {
+      max-width: 100%;
+      margin-bottom: 24px;
+    }
+
+    @media screen and (max-width: 750px) {
+      .work-return {
+        left: 3px;
+      }
+
+      h4 {
+        margin-left: 60px;
+      }
+    }
+  }
+}

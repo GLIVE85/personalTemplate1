@@ -1,0 +1,34 @@
+/*-------------------------------------------------------
+  MIXINs
+---------------------------------------------------------*/
+
+@mixin textStyle ($ff, $fs, $fw) {
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: $fw;
+  text-transform: uppercase;
+}
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin order($o) {
+  order: $o;
+}
+
+@mixin bgDefault($bg) {
+  background: url($bg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin position($val, $t, $r, $b, $l) {
+  position: $val;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+}

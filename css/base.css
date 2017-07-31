@@ -1,13 +1,70 @@
 /*-------------------------------------------------------
   IMPORTs
 ---------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Marvel|Shadows+Into+Light");
 /*-------------------------------------------------------
   VARs
 ---------------------------------------------------------*/
 /*-------------------------------------------------------
   MIXINs
 ---------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Marvel|Shadows+Into+Light");
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out; }
+
+.loader {
+  color: #ffffff;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s; }
+
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0; }
+
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s; }
+
+.loader:after {
+  left: 3.5em; }
+
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    -webkit-box-shadow: 0 2.5em 0 -1.3em;
+    box-shadow: 0 2.5em 0 -1.3em; }
+  40% {
+    -webkit-box-shadow: 0 2.5em 0 0;
+    box-shadow: 0 2.5em 0 0; } }
+
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    -webkit-box-shadow: 0 2.5em 0 -1.3em;
+    box-shadow: 0 2.5em 0 -1.3em; }
+  40% {
+    -webkit-box-shadow: 0 2.5em 0 0;
+    box-shadow: 0 2.5em 0 0; } }
+
 /*-------------------------------------------------------
   UNIVERSAL
 ---------------------------------------------------------*/
@@ -72,9 +129,6 @@ header {
     line-height: 1;
     color: #fff; }
 
-/*-------------------------------------------------------
-  CONTENT
----------------------------------------------------------*/
 #about-section h3 {
   font-family: Marvel, sans-serif;
   font-size: 16px;
@@ -282,49 +336,50 @@ header {
         right: 0px;
         left: 0px; }
     #work-section .thumb-container .a {
-      background: url("../img/ticket1-2yh37p4wt2m8h9a260x88w.jpg");
+      background: url("../img/proj1/thumb.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center; }
     #work-section .thumb-container .b {
-      background: url("../img/404-2yh34mov5w3pmm5qllevi8.png");
+      background: url("../img/proj2/thumb.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center; }
     #work-section .thumb-container .c {
-      background: url("../img/HC-2yh3678dtjyg8g21xelxq8.jpg");
+      background: url("../img/proj3/thumb.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center; }
     #work-section .thumb-container .d {
-      background: url("../img/pp1-2yh37ab5ijq0jj76pt3uv4.jpg");
+      background: url("../img/proj4/thumb.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center; }
     #work-section .thumb-container .e {
-      background: url("../img/wilderness-2yh37v617479vl3wnlspa8.png");
+      background: url("../img/proj5/thumb.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center; }
     #work-section .thumb-container .f {
-      background: url("../img/eames-2yh35o4tx2xtt2ljdqi9s0.png");
+      background: url("../img/proj6/thumb.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center; }
     #work-section .thumb-container .g {
-      background: url("../img/riverrat-2yh37bkdxh1wc0nwkgyeww.jpg");
+      background: url("../img/proj7/thumb.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center; }
     #work-section .thumb-container .h {
-      background: url("../img/bivouac2-2yh34qu4xjoxc7sib6iigw.png");
+      background: url("../img/proj8/thumb.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center; }
   #work-section .work-container {
     max-width: 600px;
     margin: 0 auto;
-    position: relative; }
+    position: relative;
+    display: none; }
     #work-section .work-container .work-return {
       width: 20px;
       height: 20px;
@@ -348,15 +403,12 @@ header {
     #work-section .work-container .spacer {
       max-width: 100%;
       margin-bottom: 24px; }
-  @media screen and (max-width: 750px) {
-    #work-section .work-container .work-return {
-      left: 3px; }
-    #work-section .work-container h4 {
-      margin-left: 60px; } }
+    @media screen and (max-width: 750px) {
+      #work-section .work-container .work-return {
+        left: 3px; }
+      #work-section .work-container h4 {
+        margin-left: 60px; } }
 
-/*-------------------------------------------------------
-  FOOTER
----------------------------------------------------------*/
 footer {
   background: #618498; }
   footer .box {

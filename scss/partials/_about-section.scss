@@ -1,0 +1,127 @@
+#about-section {
+  h3 {
+    @include textStyle ($fontMain, 16px, 700);
+    color: $accent;
+    text-align: center;
+    padding: 100px 0 30px;
+  }
+
+  .face-block {
+    max-width: 780px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+
+    .face-img {
+      background: url(../img/norm8020.png);
+      background-size: cover;
+      @include size(200px, 200px);
+      @include order(3);
+    }
+
+    [class^="icon-"] {
+      fill: $accent;
+
+      &.icon-pencil {
+        @include order(1);
+      }
+
+      &.icon-mouse {
+        @include order(2);
+      }
+
+      &.icon-browser {
+        @include order(4);
+      }
+
+      &.icon-video {
+        @include order(5);
+      }
+
+      svg {
+        @include size(50px, 50px);
+      }
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .face-block {
+      display: block;
+      text-align: center;
+
+      div {
+        display: inline-block;
+        margin: 0 24px;
+      }
+
+      .face-img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .face-block {
+      div {
+        margin: 0 10px;
+      }
+    }
+  }
+
+  .blurb {
+    max-width: 620px;
+    padding: 0 15px;
+    margin: 50px auto;
+    text-align: center;
+    @include textStyle($fontMain, 20px, 300);
+  }
+
+  .skill-block {
+    max-width: 540px;
+    margin: 100px auto;
+    color: #999;
+    overflow: hidden;
+    text-align: center;
+
+    .skill-unit {
+      width: 270px;
+      float: left;
+    }
+
+    .skill-icons {
+      font-size: 0;
+      margin: 0 0 30px;
+
+      span {
+        display: inline-block;
+        @include size(14px, 14px);
+        background-color: $accent;
+        margin-right: 10px;
+        border-radius: 50%;
+
+        &:after {
+          content: ' ';
+          display: block;
+          @include size(10px, 10px);
+          background: #fff;
+          border-radius: 50%;
+          margin: 2px;
+        }
+      }
+
+      @for $i from 1 through 10 {
+        &.level-#{$i} span:nth-child(n+#{$i+1}) {
+          background: #aaa;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    .skill-block {
+      width: 270px;
+    }
+  }
+}
